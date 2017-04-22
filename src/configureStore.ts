@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import { State } from './models';
 import { rootReducer } from './rootReducer';
 
-declare var module: { hot: any };
+declare const module: { hot: any };
 
 export const configureStore = (initialState?: State) => {
   const withMiddleware = applyMiddleware(thunk)(createStore);

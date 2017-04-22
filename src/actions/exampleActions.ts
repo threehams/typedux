@@ -1,6 +1,4 @@
-export interface ExampleActionFunction {
-  (example: string): ExampleAction;
-}
+export type ExampleActionFunction = (example: string) => ExampleAction;
 
 export interface ExampleAction {
   payload: {

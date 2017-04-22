@@ -17,7 +17,7 @@ render(
   document.getElementById('root'),
 );
 
-declare var module: { hot: any };
+declare const module: { hot: any };
 
 if (module.hot) {
   module.hot.accept('./views/App', () => {

@@ -17,9 +17,6 @@
     "noUnusedParameters": false
   },
   "types": ["node"],
-  "exclude": [
-    "src/**/*.spec.ts"
-  ],
   "include": [
     "src/**/*",
     "webpack.config.ts",
