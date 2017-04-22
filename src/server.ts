@@ -3,9 +3,9 @@ import express = require('express');
 import webpack = require('webpack');
 import compression = require('compression');
 
-import indexTemplate from './indexTemplate';
-import config from './serverConfig';
-import webpackConfig from './webpack.config';
+import { indexTemplate } from './indexTemplate';
+import { config } from './serverConfig';
+import { webpackConfig } from './webpack.config';
 
 const app = express();
 
@@ -18,7 +18,7 @@ if (config.development) {
   const compiler = webpack(webpackConfig);
   app.use(webpackDevMiddleware(compiler, {
     noInfo: true,
-    publicPath: webpackConfig.output.publicPath,
+    publicPath: webpackConfig.output && webpackConfig.output.publicPath,
     stats: { chunks: false },
   }));
   app.use('/assets', express.static(path.join(__dirname, '..', 'assets')));

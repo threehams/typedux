@@ -5,7 +5,7 @@ import { rootReducer } from './rootReducer';
 
 declare var module: { hot: any };
 
-const configureStore = (initialState?: State) => {
+export const configureStore = (initialState?: State) => {
   const withMiddleware = applyMiddleware(thunk)(createStore);
   const withDevTools = window.devToolsExtension ? window.devToolsExtension()(withMiddleware) : withMiddleware;
   const store: Store<any> = withDevTools(rootReducer, initialState);
@@ -19,5 +19,3 @@ const configureStore = (initialState?: State) => {
 
   return store;
 };
-
-export default configureStore;

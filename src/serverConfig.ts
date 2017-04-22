@@ -1,4 +1,4 @@
-export default {
+export const config = {
   aws: {
     accessKeyId: process.env.AWS_ACCESS_KEY,
     cloudfrontHost: process.env.AWS_CLOUDFRONT_HOST || '/assets/',

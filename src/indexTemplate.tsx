@@ -1,4 +1,4 @@
-export default function() {
+export const indexTemplate = () => {
   return `
     <!doctype html>
     <html>
@@ -14,4 +14,4 @@ export default function() {
     </body>
     </html>
   `;
-}
+};
