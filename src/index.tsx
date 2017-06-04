@@ -17,6 +17,7 @@ render(
   document.getElementById('root'),
 );
 
+// tslint:disable-next-line no-any
 declare const module: { hot: any };
 
 if (module.hot) {

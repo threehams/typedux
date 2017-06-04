@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production tsc -p . && cross-env NODE_ENV=production webpack --config tsDist/webpack.config.js",
+    "format": "prettier src/**/*.ts{,x} --write --trailing-comma all --single-quote --bracket-spacing",
     "lint": "tslint src/**/*.ts{,x}",
     "lint:fix": "tslint src/**/*.ts{,x} --fix",
     "postinstall": "node scripts/postinstall.js",

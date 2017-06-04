@@ -16,11 +16,13 @@ if (config.development) {
   // tslint:enable
 
   const compiler = webpack(webpackConfig);
-  app.use(webpackDevMiddleware(compiler, {
-    noInfo: true,
-    publicPath: webpackConfig.output && webpackConfig.output.publicPath,
-    stats: { chunks: false },
-  }));
+  app.use(
+    webpackDevMiddleware(compiler, {
+      noInfo: true,
+      publicPath: webpackConfig.output && webpackConfig.output.publicPath,
+      stats: { chunks: false },
+    }),
+  );
   app.use('/assets', express.static(path.join(__dirname, '..', 'assets')));
 
   app.use(webpackHotMiddleware(compiler));

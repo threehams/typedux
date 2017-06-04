@@ -2,7 +2,11 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 
 const ENTRY_POINTS = {
-  development: ['webpack-hot-middleware/client', 'react-hot-loader/patch', './src/index.tsx'],
+  development: [
+    'webpack-hot-middleware/client',
+    'react-hot-loader/patch',
+    './src/index.tsx',
+  ],
   production: ['./src/index.tsx'],
 };
 
@@ -14,7 +18,7 @@ const PLUGINS = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '\'development\'',
+        NODE_ENV: "'development'",
       },
     }),
   ],
@@ -27,7 +31,7 @@ const PLUGINS = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '\'production\'',
+        NODE_ENV: "'production'",
       },
     }),
   ],

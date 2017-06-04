@@ -20,6 +20,6 @@ const BaseExampleApp: React.StatelessComponent<AppProps> = ({ example }) => {
   );
 };
 
-export const ExampleApp: React.ComponentClass<{}> = connect(
-  mapStateToProps,
-)(BaseExampleApp);
+export const ExampleApp: React.ComponentClass<{}> = connect(mapStateToProps)(
+  BaseExampleApp,
+);
