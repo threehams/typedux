@@ -5,6 +5,7 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
+    "lib": ["es2015", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
@@ -16,7 +17,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false
   },
-  "types": ["node"],
   "exclude": [
     "src/**/*.spec.ts"
   ],

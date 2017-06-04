@@ -11,8 +11,7 @@ export class App extends React.Component<AppProps, {}> {
   public render() {
     return (
       <Provider store={this.props.store}>
-        <ExampleApp>
-        </ExampleApp>
+        <ExampleApp />
       </Provider>
     );
   }
