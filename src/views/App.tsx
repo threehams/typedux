@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { ExampleApp } from '.';
 
 interface AppProps {
+  // tslint:disable-next-line no-any
   store: any;
 }
 

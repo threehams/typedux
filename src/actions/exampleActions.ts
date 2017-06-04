@@ -7,7 +7,7 @@ export interface ExampleAction {
   type: 'EXAMPLE';
 }
 
-export const exampleAction: ExampleActionFunction = (example) => ({
+export const exampleAction: ExampleActionFunction = example => ({
   payload: {
     example,
   },

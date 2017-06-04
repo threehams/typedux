@@ -59,6 +59,7 @@
     "cross-env": "^5.0.0",
     "css-loader": "^0.28.0",
     "express": "^4.15.2",
+    "prettier": "^1.4.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-hot-loader": "^3.0.0-beta.6",
@@ -74,7 +75,7 @@
     "ts-jest": "^20.0.5",
     "ts-loader": "^2.0.3",
     "ts-node": "^3.0.2",
-    "typescript": "2.3.4",
+    "typescript": "^2.4.0-dev.20170604",
     "webpack": "^2.4.1"
   },
   "devDependencies": {

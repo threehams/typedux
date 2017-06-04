@@ -14,10 +14,12 @@ const mapStateToProps = (state: State) => ({
 const BaseExampleApp: React.StatelessComponent<AppProps> = ({ example }) => {
   return (
     <div>
-      <Example className={ example || '' }>example</Example>
-      <Example className={ example || '' }>example</Example>
+      <Example className={example || ''}>example</Example>
+      <Example className={example || ''}>example</Example>
     </div>
   );
 };
 
-export const ExampleApp = connect(mapStateToProps)(BaseExampleApp);
+export const ExampleApp: React.ComponentClass<{}> = connect(
+  mapStateToProps,
+)(BaseExampleApp);
