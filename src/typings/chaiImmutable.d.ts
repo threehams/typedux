@@ -1,1 +1,1 @@
-declare module 'chai-immutable';
+declare module "chai-immutable";

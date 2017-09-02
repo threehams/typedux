@@ -1,5 +1,5 @@
-import { ImmutableObject } from 'seamless-immutable';
-import { Example } from './';
+import { ImmutableObject } from "seamless-immutable";
+import { Example } from "./";
 
 interface StateProps {
   example: Example;

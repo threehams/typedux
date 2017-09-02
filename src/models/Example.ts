@@ -1,4 +1,4 @@
-import { ImmutableObject } from 'seamless-immutable';
+import { ImmutableObject } from "seamless-immutable";
 
 interface ExampleProps {
   example: string;

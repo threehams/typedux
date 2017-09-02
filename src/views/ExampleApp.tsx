@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import { Example } from '../components';
-import { State } from '../models';
+import * as React from "react";
+import { connect } from "react-redux";
+import { Example } from "../components";
+import { State } from "../models";
 
 interface AppProps {
   example: string;
@@ -14,8 +14,8 @@ const mapStateToProps = (state: State) => ({
 const BaseExampleApp: React.StatelessComponent<AppProps> = ({ example }) => {
   return (
     <div>
-      <Example className={example || ''}>example</Example>
-      <Example className={example || ''}>example</Example>
+      <Example className={example || ""}>example</Example>
+      <Example className={example || ""}>example</Example>
     </div>
   );
 };

@@ -1,11 +1,12 @@
 {
-  "name": "reverie-client",
+  "name": "typedux",
   "version": "1.0.0",
-  "description": "",
+  "description": "React/Redux/Typescript boilerplate",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production tsc -p . && cross-env NODE_ENV=production webpack --config tsDist/webpack.config.js",
-    "format": "prettier src/**/*.ts{,x} --write --trailing-comma all --single-quote --bracket-spacing",
+    "build":
+      "cross-env NODE_ENV=production tsc -p . && cross-env NODE_ENV=production webpack --config tsDist/webpack.config.js",
+    "format": "prettier src/**/*.ts{,x} --write --bracket-spacing",
     "lint": "tslint src/**/*.ts{,x}",
     "lint:fix": "tslint src/**/*.ts{,x} --fix",
     "postinstall": "node scripts/postinstall.js",
@@ -17,17 +18,11 @@
     "server": "cross-env NODE_ENV=production server"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "**/!(*.d.ts)"
-    ],
+    "collectCoverageFrom": ["**/!(*.d.ts)"],
     "globals": {
       "__TS_CONFIG__": "tsconfigTest.json"
     },
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js"],
     "rootDir": "src",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "testResultsProcessor": "../node_modules/ts-jest/coverageprocessor.js",
@@ -40,7 +35,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/threehams/reverie-client.git"
+    "url": "https://github.com/threehams/typedux.git"
   },
   "dependencies": {
     "@types/compression": "0.0.33",
@@ -60,14 +55,14 @@
     "cross-env": "^5.0.0",
     "css-loader": "^0.28.0",
     "express": "^4.15.2",
-    "prettier": "^1.4.2",
+    "prettier": "^1.6.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-hot-loader": "^3.0.0-beta.6",
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
     "react-test-renderer": "^15.5.4",
-    "recompose": "^0.23.1",
+    "recompose": "^0.23.5",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.0",
@@ -91,9 +86,7 @@
     "webpack-hot-middleware": "^2.18.0"
   },
   "nyc": {
-    "include": [
-      "src/**/*.js"
-    ],
+    "include": ["src/**/*.js"],
     "exclude": [
       "src/**/*.spec.js",
       "src/__test__/**/*",

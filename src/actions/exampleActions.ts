@@ -4,12 +4,12 @@ export interface ExampleAction {
   payload: {
     example: string;
   };
-  type: 'EXAMPLE';
+  type: "EXAMPLE";
 }
 
 export const exampleAction: ExampleActionFunction = example => ({
   payload: {
     example,
   },
-  type: 'EXAMPLE',
+  type: "EXAMPLE",
 });

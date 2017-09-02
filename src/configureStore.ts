@@ -1,7 +1,7 @@
-import { applyMiddleware, createStore, Store } from 'redux';
-import thunk from 'redux-thunk';
-import { State } from './models';
-import { rootReducer } from './rootReducer';
+import { applyMiddleware, createStore, Store } from "redux";
+import thunk from "redux-thunk";
+import { State } from "./models";
+import { rootReducer } from "./rootReducer";
 
 // tslint:disable-next-line no-any
 declare const module: { hot: any };
@@ -15,8 +15,8 @@ export const configureStore = (initialState?: State) => {
   const store: Store<any> = withDevTools(rootReducer, initialState);
 
   if (module.hot) {
-    module.hot.accept('./rootReducer', () => {
-      const nextRootReducer = require('./rootReducer').default;
+    module.hot.accept("./rootReducer", () => {
+      const nextRootReducer = require("./rootReducer").default;
       store.replaceReducer(nextRootReducer);
     });
   }

@@ -1,23 +1,23 @@
-import * as path from 'path';
-import * as webpack from 'webpack';
+import * as path from "path";
+import * as webpack from "webpack";
 
 const ENTRY_POINTS = {
   development: [
-    'webpack-hot-middleware/client',
-    'react-hot-loader/patch',
-    './src/index.tsx',
+    "webpack-hot-middleware/client",
+    "react-hot-loader/patch",
+    "./src/index.tsx",
   ],
-  production: ['./src/index.tsx'],
+  production: ["./src/index.tsx"],
 };
 
-const ENV = process.env.NODE_ENV || 'development';
+const ENV = process.env.NODE_ENV || "development";
 
 const PLUGINS = {
   development: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
-      'process.env': {
+      "process.env": {
         NODE_ENV: "'development'",
       },
     }),
@@ -30,7 +30,7 @@ const PLUGINS = {
       },
     }),
     new webpack.DefinePlugin({
-      'process.env': {
+      "process.env": {
         NODE_ENV: "'production'",
       },
     }),
@@ -38,8 +38,8 @@ const PLUGINS = {
 };
 
 const DEV_TOOLS = {
-  development: 'eval',
-  production: 'source-map',
+  development: "eval",
+  production: "source-map",
 };
 
 export const webpackConfig: webpack.Configuration = {
@@ -48,28 +48,28 @@ export const webpackConfig: webpack.Configuration = {
   module: {
     rules: [
       {
-        include: [path.join(__dirname, '..', 'src')],
+        include: [path.join(__dirname, "..", "src")],
         test: /\.(tsx|ts|js)/,
-        use: ['react-hot-loader/webpack', 'ts-loader'],
+        use: ["react-hot-loader/webpack", "ts-loader"],
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.json$/,
-        use: 'json-loader',
+        use: "json-loader",
       },
     ],
   },
   output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, '..', 'dist'),
-    publicPath: '/dist/',
+    filename: "bundle.js",
+    path: path.join(__dirname, "..", "dist"),
+    publicPath: "/dist/",
   },
   plugins: PLUGINS[ENV],
   resolve: {
-    extensions: ['.jsx', '.js', '.tsx', '.ts'],
+    extensions: [".jsx", ".js", ".tsx", ".ts"],
   },
 };
 

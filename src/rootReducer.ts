@@ -1,6 +1,6 @@
-import * as Immutable from 'seamless-immutable';
-import { State } from './models';
-import { exampleReducer } from './reducers';
+import * as Immutable from "seamless-immutable";
+import { State } from "./models";
+import { exampleReducer } from "./reducers";
 
 const INITIAL_STATE = Immutable.from({});
 

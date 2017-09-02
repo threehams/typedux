@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Provider } from 'react-redux';
+import * as React from "react";
+import { Provider } from "react-redux";
 
-import { ExampleApp } from '.';
+import { ExampleApp } from ".";
 
 interface AppProps {
   // tslint:disable-next-line no-any
